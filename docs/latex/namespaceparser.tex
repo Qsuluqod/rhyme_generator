@@ -1,0 +1,94 @@
+\hypertarget{namespaceparser}{}\doxysection{Dokumentace jmenného prostoru parser}
+\label{namespaceparser}\index{parser@{parser}}
+\doxysubsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceparser_aff3b2396f2b43a588b1399d2400e6eee}{ilegal}} (\mbox{\hyperlink{namespaceparser_a30298e7790b6940580c63fe289b65b6b}{word}})
+\item 
+def \mbox{\hyperlink{namespaceparser_aac30d1f334ee86024e9e654a2fda8392}{legal}} (\mbox{\hyperlink{namespaceparser_a30298e7790b6940580c63fe289b65b6b}{word}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceparser_a4bd5277041a6cb190182c8e39c521fea}{input\+\_\+file}} = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}capek1.\+csv\char`\"{}, \char`\"{}r\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceparser_a7c4440e954dda8984cdde9e0cd26d91e}{output\+\_\+file}} = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}data.\+txt\char`\"{}, \char`\"{}w\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})
+\item 
+string \mbox{\hyperlink{namespaceparser_a76d1bed704b5ab3184c1a93452be6aae}{allowed}} = \char`\"{}aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceparser_aa765ed3a36701fbf594efcdcd424ba49}{not\+\_\+allowed}} = \char`\"{}.\textbackslash{}\char`\"{},;0123456789?!@\#\$\%$^\wedge$\&$\ast$()-\/+$\ast$/\char`\"{}
+\item 
+int \mbox{\hyperlink{namespaceparser_a181aeae6908a5f2d4df947a54563a3da}{count}} = 0
+\item 
+bool \mbox{\hyperlink{namespaceparser_a1fb8f7dbdddc275ac94a29a8ab6f6f83}{first}} = True
+\item 
+\mbox{\hyperlink{namespaceparser_a0fdcf615eed8bf4f214d8c391774ff18}{line}} = input\+\_\+file.\+readline()
+\item 
+\mbox{\hyperlink{namespaceparser_a30298e7790b6940580c63fe289b65b6b}{word}} = line.\+split(\char`\"{};\char`\"{})\mbox{[}1\mbox{]}\mbox{[}1\+:-\/1\mbox{]}.strip().lower()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentace funkcí}
+\mbox{\Hypertarget{namespaceparser_aff3b2396f2b43a588b1399d2400e6eee}\label{namespaceparser_aff3b2396f2b43a588b1399d2400e6eee}} 
+\index{parser@{parser}!ilegal@{ilegal}}
+\index{ilegal@{ilegal}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{ilegal()}{ilegal()}}
+{\footnotesize\ttfamily def parser.\+ilegal (\begin{DoxyParamCaption}\item[{}]{word }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparser_aac30d1f334ee86024e9e654a2fda8392}\label{namespaceparser_aac30d1f334ee86024e9e654a2fda8392}} 
+\index{parser@{parser}!legal@{legal}}
+\index{legal@{legal}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{legal()}{legal()}}
+{\footnotesize\ttfamily def parser.\+legal (\begin{DoxyParamCaption}\item[{}]{word }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentace proměnných}
+\mbox{\Hypertarget{namespaceparser_a76d1bed704b5ab3184c1a93452be6aae}\label{namespaceparser_a76d1bed704b5ab3184c1a93452be6aae}} 
+\index{parser@{parser}!allowed@{allowed}}
+\index{allowed@{allowed}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{allowed}{allowed}}
+{\footnotesize\ttfamily string parser.\+allowed = \char`\"{}aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž\char`\"{}}
+
+\mbox{\Hypertarget{namespaceparser_a181aeae6908a5f2d4df947a54563a3da}\label{namespaceparser_a181aeae6908a5f2d4df947a54563a3da}} 
+\index{parser@{parser}!count@{count}}
+\index{count@{count}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int parser.\+count = 0}
+
+\mbox{\Hypertarget{namespaceparser_a1fb8f7dbdddc275ac94a29a8ab6f6f83}\label{namespaceparser_a1fb8f7dbdddc275ac94a29a8ab6f6f83}} 
+\index{parser@{parser}!first@{first}}
+\index{first@{first}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{first}{first}}
+{\footnotesize\ttfamily bool parser.\+first = True}
+
+\mbox{\Hypertarget{namespaceparser_a4bd5277041a6cb190182c8e39c521fea}\label{namespaceparser_a4bd5277041a6cb190182c8e39c521fea}} 
+\index{parser@{parser}!input\_file@{input\_file}}
+\index{input\_file@{input\_file}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{input\_file}{input\_file}}
+{\footnotesize\ttfamily parser.\+input\+\_\+file = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}capek1.\+csv\char`\"{}, \char`\"{}r\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})}
+
+\mbox{\Hypertarget{namespaceparser_a0fdcf615eed8bf4f214d8c391774ff18}\label{namespaceparser_a0fdcf615eed8bf4f214d8c391774ff18}} 
+\index{parser@{parser}!line@{line}}
+\index{line@{line}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily parser.\+line = input\+\_\+file.\+readline()}
+
+\mbox{\Hypertarget{namespaceparser_aa765ed3a36701fbf594efcdcd424ba49}\label{namespaceparser_aa765ed3a36701fbf594efcdcd424ba49}} 
+\index{parser@{parser}!not\_allowed@{not\_allowed}}
+\index{not\_allowed@{not\_allowed}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{not\_allowed}{not\_allowed}}
+{\footnotesize\ttfamily string parser.\+not\+\_\+allowed = \char`\"{}.\textbackslash{}\char`\"{},;0123456789?!@\#\$\%$^\wedge$\&$\ast$()-\/+$\ast$/\char`\"{}}
+
+\mbox{\Hypertarget{namespaceparser_a7c4440e954dda8984cdde9e0cd26d91e}\label{namespaceparser_a7c4440e954dda8984cdde9e0cd26d91e}} 
+\index{parser@{parser}!output\_file@{output\_file}}
+\index{output\_file@{output\_file}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{output\_file}{output\_file}}
+{\footnotesize\ttfamily parser.\+output\+\_\+file = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}data.\+txt\char`\"{}, \char`\"{}w\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})}
+
+\mbox{\Hypertarget{namespaceparser_a30298e7790b6940580c63fe289b65b6b}\label{namespaceparser_a30298e7790b6940580c63fe289b65b6b}} 
+\index{parser@{parser}!word@{word}}
+\index{word@{word}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{word}{word}}
+{\footnotesize\ttfamily parser.\+word = line.\+split(\char`\"{};\char`\"{})\mbox{[}1\mbox{]}\mbox{[}1\+:-\/1\mbox{]}.strip().lower()}
+

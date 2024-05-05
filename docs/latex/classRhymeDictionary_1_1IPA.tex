@@ -1,0 +1,646 @@
+\hypertarget{classRhymeDictionary_1_1IPA}{}\doxysection{Dokumentace třídy Rhyme\+Dictionary.\+IPA}
+\label{classRhymeDictionary_1_1IPA}\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+
+
+Třída, kde jsou uloženy všechny fonetické a fonologické vlastnosti písmen, na jejichž základě zvládne sestavit matici podobnosti nebo udržet funkce podobnosti.   
+
+
+\doxysubsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+delegate int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a562b779216d14ecddc3ca3a899e50730}{Similar\+Letters}} (int letter)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statické veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a67d09337eb4667656ef93152df43529c}{Same\+Letter\+Only}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která vrátí pouze to stejné písmeno. Velice striktní.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_af2ca57f3efa83e212528984bd8bdb7d9}{All\+Letters}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která pro všechna písmena vrátí všechna písmena. Velice benevolentní.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a0661bd9cfc14f1c0e439567ae7bb7e9f}{Similar\+Letters\+From\+All\+Groups}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která pro všechna písmena, vrátí všechna písmena, která s ním sdílí alespoň jednu fonetickou vlastnost.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a39a4450d01f1001392e6591fbbe2ad9a}{Similar\+Letters\+From\+Pairs\+Only}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a40b6898cd35da8e305530b82258e0534}{Similar\+Letters\+By\+Phonetic\+Matrix}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac3dac7b265b5c567f249d55b08d60658}{Similar\+Letters\+By\+Phonologic\+Matrix}} (int letter)
+\begin{DoxyCompactList}\small\item\em Podobnostní funkce, která  \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a6cb3df95184e8bfbd6166cee975ade6d}{Generate\+Phonologic\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Vepíše hodnoty do matice fonému, kde podobnostní vztahy jsou určeny na základě fonologických rysů.  \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ad37a0514c11149227e927410a0cea40b}{Generate\+Phonetic\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Vepíše hodnoty do matice fonému, kde podobnostní vztahy jsou určeny na základě fonetických rysů.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a2ed5729ec77829142e77b4583345b52a}{Transcript\+And\+Convert\+String}} (string word)
+\begin{DoxyCompactList}\small\item\em Vytvoří fonetickou transkripci, kterou následně převede do číselné reprezentace znaků.  \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a1b7653049df035339e3f73d71a4fac53}{Get\+Index}} (char\mbox{[}$\,$\mbox{]} array, char wanted)
+\begin{DoxyCompactList}\small\item\em Vrátí index znaku z pole znaků.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statické veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ada771137ca9c224fa53b7faf35ce148d}{Chars}}
+\item 
+static int \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{num\+\_\+of\+\_\+chars}} = Chars.\+Length
+\item 
+static int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aff53b85da085b36d24b7b5b91e18b0b2}{Attributes}}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ae4f3f1d41987e52c74404aa999e65e6d}{Plosive}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}p\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}t\textquotesingle{}, \textquotesingle{}d\textquotesingle{}, \textquotesingle{}ť\textquotesingle{}, \textquotesingle{}ď\textquotesingle{}, \textquotesingle{}k\textquotesingle{}, \textquotesingle{}g\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a37855e7657560d7dcd92ea6ccf28da4f}{Nasal}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}m\textquotesingle{}, \textquotesingle{}n\textquotesingle{}, \textquotesingle{}ň\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa4b560ad103f8156524fa6ce60a3fe2c}{Trill}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}r\textquotesingle{}, \textquotesingle{}ř\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a981b567d213c08d553ca56ff1d03335f}{Fricative}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}f\textquotesingle{}, \textquotesingle{}v\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}z\textquotesingle{}, \textquotesingle{}š\textquotesingle{}, \textquotesingle{}ž\textquotesingle{}, \textquotesingle{}ȟ\textquotesingle{}, \textquotesingle{}h\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3f2c5703a17aa441e0eb1d8dca038630}{Approximant}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}j\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a098c34f2bb0ae491f127d6ee75531767}{Lateral}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}l\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aeeca8f359ff4129ae653861492808431}{Consonants\+Realistion}} = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ae4f3f1d41987e52c74404aa999e65e6d}{Plosive}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a37855e7657560d7dcd92ea6ccf28da4f}{Nasal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa4b560ad103f8156524fa6ce60a3fe2c}{Trill}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a981b567d213c08d553ca56ff1d03335f}{Fricative}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3f2c5703a17aa441e0eb1d8dca038630}{Approximant}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a098c34f2bb0ae491f127d6ee75531767}{Lateral}} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ad3ef338a5936990d844dc3a94bdb01ea}{Bilabial}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}p\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}m\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_af957c35cc68e22ed3fee3074b6681305}{Labiodental}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}f\textquotesingle{}, \textquotesingle{}v\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a0294906e6bfa3f80298ed2cbd05728c3}{Alveolar}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}t\textquotesingle{}, \textquotesingle{}d\textquotesingle{}, \textquotesingle{}n\textquotesingle{}, \textquotesingle{}r\textquotesingle{}, \textquotesingle{}ř\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}z\textquotesingle{}, \textquotesingle{}š\textquotesingle{}, \textquotesingle{}ž\textquotesingle{}, \textquotesingle{}l\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a785a4d7c9eb12e5b96752a41a2b473d5}{Palatal}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}ť\textquotesingle{}, \textquotesingle{}ď\textquotesingle{}, \textquotesingle{}ň\textquotesingle{}, \textquotesingle{}j\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a8ecea7b1579c41e97a42efe20ebeaee5}{Velar}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}k\textquotesingle{}, \textquotesingle{}g\textquotesingle{}, \textquotesingle{}ȟ\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac7331e39c63a40f31801a896345dc5bb}{Glottal}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}h\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a468b9cb37a0df05852fc20b929fa5ed7}{Consonants\+Place}} = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ad3ef338a5936990d844dc3a94bdb01ea}{Bilabial}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_af957c35cc68e22ed3fee3074b6681305}{Labiodental}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a0294906e6bfa3f80298ed2cbd05728c3}{Alveolar}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a785a4d7c9eb12e5b96752a41a2b473d5}{Palatal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a8ecea7b1579c41e97a42efe20ebeaee5}{Velar}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac7331e39c63a40f31801a896345dc5bb}{Glottal}} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a2482b42fa8ae969dc208a0618bf49b80}{Voice\+Pairs}}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa7f61f69bccccee7d27c6fafbbf64e81}{Front}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}i\textquotesingle{}, \textquotesingle{}í\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{}, \textquotesingle{}a\textquotesingle{}, \textquotesingle{}á\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac0f4e54b4547d66d101beb53eb81f34f}{Back}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}u\textquotesingle{}, \textquotesingle{}ú\textquotesingle{}, \textquotesingle{}o\textquotesingle{}, \textquotesingle{}ó\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a5657153c6aa8801def659a8fbbc00a48}{Closed}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}i\textquotesingle{}, \textquotesingle{}í\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a71ff3cac9a9aacecddc1879525d45423}{Open\+Closed}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{}, \textquotesingle{}o\textquotesingle{}, \textquotesingle{}ó\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a6bc43eb0336270208961e3680d40305f}{Open}} = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}a\textquotesingle{}, \textquotesingle{}á\textquotesingle{} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7203d7be2ac6d6fceeb91efdd6e884e8}{Vocal\+Vertical}} = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a5657153c6aa8801def659a8fbbc00a48}{Closed}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a71ff3cac9a9aacecddc1879525d45423}{Open\+Closed}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a6bc43eb0336270208961e3680d40305f}{Open}} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3082e8f605dba3d0339494d1246ed5d5}{Vocal\+Horizontal}} = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa7f61f69bccccee7d27c6fafbbf64e81}{Front}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac0f4e54b4547d66d101beb53eb81f34f}{Back}} \}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_adf2eca582168e94de17f6ec49313b916}{Duration\+Pairs}}
+\item 
+static char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a220d26c70b245fbce2839b236326feae}{All\+Groups}} = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aeeca8f359ff4129ae653861492808431}{Consonants\+Realistion}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a468b9cb37a0df05852fc20b929fa5ed7}{Consonants\+Place}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a2482b42fa8ae969dc208a0618bf49b80}{Voice\+Pairs}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3082e8f605dba3d0339494d1246ed5d5}{Vocal\+Horizontal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7203d7be2ac6d6fceeb91efdd6e884e8}{Vocal\+Vertical}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_adf2eca582168e94de17f6ec49313b916}{Duration\+Pairs}} \}
+\item 
+static string\mbox{[},\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aea9667e95cc4f5bd5d9a1771abc6e05f}{Rules}}
+\item 
+static \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ae4b515e4fb0804fd4af13c26472df443}{phonetic\+Matrix}} = new \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}()
+\item 
+static \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aaeed1fb57e33b6a0c1d43ff0494f7186}{phonologic\+Matrix}} = new \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}()
+\item 
+static int \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a718110fdcb437256973ec9ee0a7e4dce}{count}} = 5
+\item 
+static float \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ad713b2c6ff4f5e3fcc74ace5f16b01f4}{tolerance}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Statické privátní metody}
+\begin{DoxyCompactItemize}
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa76756919fa1e114bbc46670fd0474f0}{Get\+Letters\+From\+All\+Groups}} (char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} over\+\_\+groups, char letter)
+\item 
+static char\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a8d30a4cc48b60a5979a4bd71e4662750}{Get\+Letters\+From\+Group}} (char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} groups, char letter)
+\begin{DoxyCompactList}\small\item\em Pro zadané písmeno a pole polí, najde první pole, které písmeno obsahuje. Předpokládá se že pole se bude sestávat z disjunktních polí.  \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classRhymeDictionary_1_1IPA_afb1600f09370dffdc08fecb95f7a0da9}{Transcript\+String}} (string word)
+\begin{DoxyCompactList}\small\item\em Vytvoří fonetickou transkripci řetězce zapsaného dle ortografického úzusu mluvnice české.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a4c21bdcd6378331bffee8d25f1c3a8ac}{Convert\+String}} (string word)
+\begin{DoxyCompactList}\small\item\em Převede textový řetězec na pole číselných reprezentací znaků onoho řetězce.  \end{DoxyCompactList}\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ab2f3a0462151bc75c68435e9cf1197fc}{Convert\+Char\+Array}} (char\mbox{[}$\,$\mbox{]} array)
+\begin{DoxyCompactList}\small\item\em Převede pole znaků na jejich číselné reprezentace.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Třída, kde jsou uloženy všechny fonetické a fonologické vlastnosti písmen, na jejichž základě zvládne sestavit matici podobnosti nebo udržet funkce podobnosti.  
+
+\doxysubsection{Dokumentace členských funkcí}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_af2ca57f3efa83e212528984bd8bdb7d9}\label{classRhymeDictionary_1_1IPA_af2ca57f3efa83e212528984bd8bdb7d9}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!AllLetters@{AllLetters}}
+\index{AllLetters@{AllLetters}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{AllLetters()}{AllLetters()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+All\+Letters (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která pro všechna písmena vrátí všechna písmena. Velice benevolentní.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace naku, pro který chceme získat všechna písmena. Hodnět na tomto parametru záleží. Nepodceňovat v žádném případě!\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číselné reprezentace všech znaků.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ab2f3a0462151bc75c68435e9cf1197fc}\label{classRhymeDictionary_1_1IPA_ab2f3a0462151bc75c68435e9cf1197fc}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!ConvertCharArray@{ConvertCharArray}}
+\index{ConvertCharArray@{ConvertCharArray}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{ConvertCharArray()}{ConvertCharArray()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Convert\+Char\+Array (\begin{DoxyParamCaption}\item[{char\mbox{[}$\,$\mbox{]}}]{array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Převede pole znaků na jejich číselné reprezentace.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em array} & Pole znaků.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Pole číselných reprezentací znaků.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a4c21bdcd6378331bffee8d25f1c3a8ac}\label{classRhymeDictionary_1_1IPA_a4c21bdcd6378331bffee8d25f1c3a8ac}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!ConvertString@{ConvertString}}
+\index{ConvertString@{ConvertString}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{ConvertString()}{ConvertString()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Convert\+String (\begin{DoxyParamCaption}\item[{string}]{word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Převede textový řetězec na pole číselných reprezentací znaků onoho řetězce.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em word} & Řetězec, který chceme převést.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Pole číselných reprezentací znaků onoho řetězce.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ad37a0514c11149227e927410a0cea40b}\label{classRhymeDictionary_1_1IPA_ad37a0514c11149227e927410a0cea40b}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!GeneratePhoneticMatrix@{GeneratePhoneticMatrix}}
+\index{GeneratePhoneticMatrix@{GeneratePhoneticMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{GeneratePhoneticMatrix()}{GeneratePhoneticMatrix()}}
+{\footnotesize\ttfamily static void Rhyme\+Dictionary.\+IPA.\+Generate\+Phonetic\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Vepíše hodnoty do matice fonému, kde podobnostní vztahy jsou určeny na základě fonetických rysů.  
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a6cb3df95184e8bfbd6166cee975ade6d}\label{classRhymeDictionary_1_1IPA_a6cb3df95184e8bfbd6166cee975ade6d}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!GeneratePhonologicMatrix@{GeneratePhonologicMatrix}}
+\index{GeneratePhonologicMatrix@{GeneratePhonologicMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{GeneratePhonologicMatrix()}{GeneratePhonologicMatrix()}}
+{\footnotesize\ttfamily static void Rhyme\+Dictionary.\+IPA.\+Generate\+Phonologic\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Vepíše hodnoty do matice fonému, kde podobnostní vztahy jsou určeny na základě fonologických rysů.  
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a1b7653049df035339e3f73d71a4fac53}\label{classRhymeDictionary_1_1IPA_a1b7653049df035339e3f73d71a4fac53}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}}
+{\footnotesize\ttfamily static int Rhyme\+Dictionary.\+IPA.\+Get\+Index (\begin{DoxyParamCaption}\item[{char\mbox{[}$\,$\mbox{]}}]{array,  }\item[{char}]{wanted }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Vrátí index znaku z pole znaků.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em array} & Pole znaků, v němž chceme najít index prvku.\\
+\hline
+{\em wanted} & Znak, jehož index cheme znát.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Index prvku wanted v array.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aa76756919fa1e114bbc46670fd0474f0}\label{classRhymeDictionary_1_1IPA_aa76756919fa1e114bbc46670fd0474f0}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!GetLettersFromAllGroups@{GetLettersFromAllGroups}}
+\index{GetLettersFromAllGroups@{GetLettersFromAllGroups}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{GetLettersFromAllGroups()}{GetLettersFromAllGroups()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Get\+Letters\+From\+All\+Groups (\begin{DoxyParamCaption}\item[{char}]{over\+\_\+groups\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{char}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parametry}
+{\em over\+\_\+groups} & \\
+\hline
+{\em letter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a8d30a4cc48b60a5979a4bd71e4662750}\label{classRhymeDictionary_1_1IPA_a8d30a4cc48b60a5979a4bd71e4662750}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!GetLettersFromGroup@{GetLettersFromGroup}}
+\index{GetLettersFromGroup@{GetLettersFromGroup}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{GetLettersFromGroup()}{GetLettersFromGroup()}}
+{\footnotesize\ttfamily static char\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Get\+Letters\+From\+Group (\begin{DoxyParamCaption}\item[{char}]{groups\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{char}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Pro zadané písmeno a pole polí, najde první pole, které písmeno obsahuje. Předpokládá se že pole se bude sestávat z disjunktních polí.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em groups} & Pole polí, ze kterého chceme najít to jedno, které obsahuje náš znak.\\
+\hline
+{\em letter} & Znak, jehož pole chceme najít.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Pole ve kterém se znak nachází.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a67d09337eb4667656ef93152df43529c}\label{classRhymeDictionary_1_1IPA_a67d09337eb4667656ef93152df43529c}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SameLetterOnly@{SameLetterOnly}}
+\index{SameLetterOnly@{SameLetterOnly}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SameLetterOnly()}{SameLetterOnly()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Same\+Letter\+Only (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která vrátí pouze to stejné písmeno. Velice striktní.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace znaku, pro který chceme zjistit ten stejný znak.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číselná reprezentace tohotéhož znaku.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a562b779216d14ecddc3ca3a899e50730}\label{classRhymeDictionary_1_1IPA_a562b779216d14ecddc3ca3a899e50730}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SimilarLetters@{SimilarLetters}}
+\index{SimilarLetters@{SimilarLetters}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SimilarLetters()}{SimilarLetters()}}
+{\footnotesize\ttfamily delegate int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Similar\+Letters (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a40b6898cd35da8e305530b82258e0534}\label{classRhymeDictionary_1_1IPA_a40b6898cd35da8e305530b82258e0534}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SimilarLettersByPhoneticMatrix@{SimilarLettersByPhoneticMatrix}}
+\index{SimilarLettersByPhoneticMatrix@{SimilarLettersByPhoneticMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SimilarLettersByPhoneticMatrix()}{SimilarLettersByPhoneticMatrix()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Similar\+Letters\+By\+Phonetic\+Matrix (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace znaku, pro který hledáme podobné znaky.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ac3dac7b265b5c567f249d55b08d60658}\label{classRhymeDictionary_1_1IPA_ac3dac7b265b5c567f249d55b08d60658}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SimilarLettersByPhonologicMatrix@{SimilarLettersByPhonologicMatrix}}
+\index{SimilarLettersByPhonologicMatrix@{SimilarLettersByPhonologicMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SimilarLettersByPhonologicMatrix()}{SimilarLettersByPhonologicMatrix()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Similar\+Letters\+By\+Phonologic\+Matrix (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace znaku, pro který hledáme podobné znaky.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a0661bd9cfc14f1c0e439567ae7bb7e9f}\label{classRhymeDictionary_1_1IPA_a0661bd9cfc14f1c0e439567ae7bb7e9f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SimilarLettersFromAllGroups@{SimilarLettersFromAllGroups}}
+\index{SimilarLettersFromAllGroups@{SimilarLettersFromAllGroups}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SimilarLettersFromAllGroups()}{SimilarLettersFromAllGroups()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Similar\+Letters\+From\+All\+Groups (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která pro všechna písmena, vrátí všechna písmena, která s ním sdílí alespoň jednu fonetickou vlastnost.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace znaku, pro který hledáme podobné znaky.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číselné reprezentace všech znaků, které sdílejí s hledaným znakem alespoň jeden rys
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a39a4450d01f1001392e6591fbbe2ad9a}\label{classRhymeDictionary_1_1IPA_a39a4450d01f1001392e6591fbbe2ad9a}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!SimilarLettersFromPairsOnly@{SimilarLettersFromPairsOnly}}
+\index{SimilarLettersFromPairsOnly@{SimilarLettersFromPairsOnly}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{SimilarLettersFromPairsOnly()}{SimilarLettersFromPairsOnly()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Similar\+Letters\+From\+Pairs\+Only (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Podobnostní funkce, která  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Číselná reprezentace znaku, pro který hledáme podobné znaky.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a2ed5729ec77829142e77b4583345b52a}\label{classRhymeDictionary_1_1IPA_a2ed5729ec77829142e77b4583345b52a}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!TranscriptAndConvertString@{TranscriptAndConvertString}}
+\index{TranscriptAndConvertString@{TranscriptAndConvertString}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{TranscriptAndConvertString()}{TranscriptAndConvertString()}}
+{\footnotesize\ttfamily static int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Transcript\+And\+Convert\+String (\begin{DoxyParamCaption}\item[{string}]{word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Vytvoří fonetickou transkripci, kterou následně převede do číselné reprezentace znaků.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em word} & Slovo, které chceme převést.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Pole číselných reprezentací znaků onoho řetězce.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_afb1600f09370dffdc08fecb95f7a0da9}\label{classRhymeDictionary_1_1IPA_afb1600f09370dffdc08fecb95f7a0da9}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!TranscriptString@{TranscriptString}}
+\index{TranscriptString@{TranscriptString}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{TranscriptString()}{TranscriptString()}}
+{\footnotesize\ttfamily static string Rhyme\+Dictionary.\+IPA.\+Transcript\+String (\begin{DoxyParamCaption}\item[{string}]{word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Vytvoří fonetickou transkripci řetězce zapsaného dle ortografického úzusu mluvnice české.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em word} & Slovo, které cheme převést.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Fonetická transkripce word.
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentace datových členů}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a220d26c70b245fbce2839b236326feae}\label{classRhymeDictionary_1_1IPA_a220d26c70b245fbce2839b236326feae}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!AllGroups@{AllGroups}}
+\index{AllGroups@{AllGroups}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{AllGroups}{AllGroups}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+All\+Groups = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aeeca8f359ff4129ae653861492808431}{Consonants\+Realistion}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a468b9cb37a0df05852fc20b929fa5ed7}{Consonants\+Place}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a2482b42fa8ae969dc208a0618bf49b80}{Voice\+Pairs}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3082e8f605dba3d0339494d1246ed5d5}{Vocal\+Horizontal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7203d7be2ac6d6fceeb91efdd6e884e8}{Vocal\+Vertical}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_adf2eca582168e94de17f6ec49313b916}{Duration\+Pairs}} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a0294906e6bfa3f80298ed2cbd05728c3}\label{classRhymeDictionary_1_1IPA_a0294906e6bfa3f80298ed2cbd05728c3}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Alveolar@{Alveolar}}
+\index{Alveolar@{Alveolar}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Alveolar}{Alveolar}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Alveolar = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}t\textquotesingle{}, \textquotesingle{}d\textquotesingle{}, \textquotesingle{}n\textquotesingle{}, \textquotesingle{}r\textquotesingle{}, \textquotesingle{}ř\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}z\textquotesingle{}, \textquotesingle{}š\textquotesingle{}, \textquotesingle{}ž\textquotesingle{}, \textquotesingle{}l\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a3f2c5703a17aa441e0eb1d8dca038630}\label{classRhymeDictionary_1_1IPA_a3f2c5703a17aa441e0eb1d8dca038630}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Approximant@{Approximant}}
+\index{Approximant@{Approximant}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Approximant}{Approximant}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Approximant = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}j\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aff53b85da085b36d24b7b5b91e18b0b2}\label{classRhymeDictionary_1_1IPA_aff53b85da085b36d24b7b5b91e18b0b2}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Attributes@{Attributes}}
+\index{Attributes@{Attributes}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Attributes}{Attributes}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Attributes\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ac0f4e54b4547d66d101beb53eb81f34f}\label{classRhymeDictionary_1_1IPA_ac0f4e54b4547d66d101beb53eb81f34f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Back@{Back}}
+\index{Back@{Back}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Back}{Back}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Back = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}u\textquotesingle{}, \textquotesingle{}ú\textquotesingle{}, \textquotesingle{}o\textquotesingle{}, \textquotesingle{}ó\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ad3ef338a5936990d844dc3a94bdb01ea}\label{classRhymeDictionary_1_1IPA_ad3ef338a5936990d844dc3a94bdb01ea}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Bilabial@{Bilabial}}
+\index{Bilabial@{Bilabial}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Bilabial}{Bilabial}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Bilabial = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}p\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}m\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ada771137ca9c224fa53b7faf35ce148d}\label{classRhymeDictionary_1_1IPA_ada771137ca9c224fa53b7faf35ce148d}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Chars@{Chars}}
+\index{Chars@{Chars}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Chars}{Chars}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Chars\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Inicializační hodnota\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'a'}, \textcolor{stringliteral}{'á'}, \textcolor{charliteral}{'b'}, \textcolor{charliteral}{'d'}, \textcolor{stringliteral}{'ď'}, \textcolor{charliteral}{'e'}, \textcolor{stringliteral}{'é'}, \textcolor{charliteral}{'f'}, \textcolor{charliteral}{'g'}, \textcolor{charliteral}{'h'}, }
+\DoxyCodeLine{                                                \textcolor{stringliteral}{'ȟ'}, \textcolor{charliteral}{'i'}, \textcolor{stringliteral}{'í'}, \textcolor{charliteral}{'j'}, \textcolor{charliteral}{'k'}, \textcolor{charliteral}{'l'}, \textcolor{charliteral}{'m'}, \textcolor{charliteral}{'n'}, \textcolor{stringliteral}{'ň'}, \textcolor{charliteral}{'o'}, }
+\DoxyCodeLine{                                                \textcolor{stringliteral}{'ó'}, \textcolor{charliteral}{'p'}, \textcolor{charliteral}{'r'}, \textcolor{stringliteral}{'ř'}, \textcolor{charliteral}{'s'}, \textcolor{stringliteral}{'š'}, \textcolor{charliteral}{'t'}, \textcolor{stringliteral}{'ť'}, \textcolor{charliteral}{'u'}, \textcolor{stringliteral}{'ú'}, }
+\DoxyCodeLine{                                                \textcolor{charliteral}{'v'}, \textcolor{charliteral}{'z'}, \textcolor{stringliteral}{'ž'} \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a5657153c6aa8801def659a8fbbc00a48}\label{classRhymeDictionary_1_1IPA_a5657153c6aa8801def659a8fbbc00a48}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Closed@{Closed}}
+\index{Closed@{Closed}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Closed}{Closed}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Closed = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}i\textquotesingle{}, \textquotesingle{}í\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a468b9cb37a0df05852fc20b929fa5ed7}\label{classRhymeDictionary_1_1IPA_a468b9cb37a0df05852fc20b929fa5ed7}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!ConsonantsPlace@{ConsonantsPlace}}
+\index{ConsonantsPlace@{ConsonantsPlace}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{ConsonantsPlace}{ConsonantsPlace}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Consonants\+Place = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ad3ef338a5936990d844dc3a94bdb01ea}{Bilabial}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_af957c35cc68e22ed3fee3074b6681305}{Labiodental}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a0294906e6bfa3f80298ed2cbd05728c3}{Alveolar}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a785a4d7c9eb12e5b96752a41a2b473d5}{Palatal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a8ecea7b1579c41e97a42efe20ebeaee5}{Velar}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac7331e39c63a40f31801a896345dc5bb}{Glottal}} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aeeca8f359ff4129ae653861492808431}\label{classRhymeDictionary_1_1IPA_aeeca8f359ff4129ae653861492808431}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!ConsonantsRealistion@{ConsonantsRealistion}}
+\index{ConsonantsRealistion@{ConsonantsRealistion}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{ConsonantsRealistion}{ConsonantsRealistion}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Consonants\+Realistion = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ae4f3f1d41987e52c74404aa999e65e6d}{Plosive}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a37855e7657560d7dcd92ea6ccf28da4f}{Nasal}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa4b560ad103f8156524fa6ce60a3fe2c}{Trill}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a981b567d213c08d553ca56ff1d03335f}{Fricative}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a3f2c5703a17aa441e0eb1d8dca038630}{Approximant}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a098c34f2bb0ae491f127d6ee75531767}{Lateral}} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a718110fdcb437256973ec9ee0a7e4dce}\label{classRhymeDictionary_1_1IPA_a718110fdcb437256973ec9ee0a7e4dce}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!count@{count}}
+\index{count@{count}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int Rhyme\+Dictionary.\+IPA.\+count = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_adf2eca582168e94de17f6ec49313b916}\label{classRhymeDictionary_1_1IPA_adf2eca582168e94de17f6ec49313b916}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!DurationPairs@{DurationPairs}}
+\index{DurationPairs@{DurationPairs}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{DurationPairs}{DurationPairs}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Duration\+Pairs\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Inicializační hodnota\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} \textcolor{keywordtype}{char}[][]  \{ \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'a'}, \textcolor{stringliteral}{'á'} \}, }
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'e'}, \textcolor{stringliteral}{'é'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'i'}, \textcolor{stringliteral}{'í'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'o'}, \textcolor{stringliteral}{'ó'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'u'}, \textcolor{stringliteral}{'ú'} \} \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a981b567d213c08d553ca56ff1d03335f}\label{classRhymeDictionary_1_1IPA_a981b567d213c08d553ca56ff1d03335f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Fricative@{Fricative}}
+\index{Fricative@{Fricative}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Fricative}{Fricative}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Fricative = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}f\textquotesingle{}, \textquotesingle{}v\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}z\textquotesingle{}, \textquotesingle{}š\textquotesingle{}, \textquotesingle{}ž\textquotesingle{}, \textquotesingle{}ȟ\textquotesingle{}, \textquotesingle{}h\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aa7f61f69bccccee7d27c6fafbbf64e81}\label{classRhymeDictionary_1_1IPA_aa7f61f69bccccee7d27c6fafbbf64e81}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Front@{Front}}
+\index{Front@{Front}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Front}{Front}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Front = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}i\textquotesingle{}, \textquotesingle{}í\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{}, \textquotesingle{}a\textquotesingle{}, \textquotesingle{}á\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ac7331e39c63a40f31801a896345dc5bb}\label{classRhymeDictionary_1_1IPA_ac7331e39c63a40f31801a896345dc5bb}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Glottal@{Glottal}}
+\index{Glottal@{Glottal}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Glottal}{Glottal}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Glottal = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}h\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_af957c35cc68e22ed3fee3074b6681305}\label{classRhymeDictionary_1_1IPA_af957c35cc68e22ed3fee3074b6681305}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Labiodental@{Labiodental}}
+\index{Labiodental@{Labiodental}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Labiodental}{Labiodental}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Labiodental = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}f\textquotesingle{}, \textquotesingle{}v\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a098c34f2bb0ae491f127d6ee75531767}\label{classRhymeDictionary_1_1IPA_a098c34f2bb0ae491f127d6ee75531767}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Lateral@{Lateral}}
+\index{Lateral@{Lateral}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Lateral}{Lateral}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Lateral = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}l\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a37855e7657560d7dcd92ea6ccf28da4f}\label{classRhymeDictionary_1_1IPA_a37855e7657560d7dcd92ea6ccf28da4f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Nasal@{Nasal}}
+\index{Nasal@{Nasal}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Nasal}{Nasal}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Nasal = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}m\textquotesingle{}, \textquotesingle{}n\textquotesingle{}, \textquotesingle{}ň\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}\label{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!num\_of\_chars@{num\_of\_chars}}
+\index{num\_of\_chars@{num\_of\_chars}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{num\_of\_chars}{num\_of\_chars}}
+{\footnotesize\ttfamily int Rhyme\+Dictionary.\+IPA.\+num\+\_\+of\+\_\+chars = Chars.\+Length\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a6bc43eb0336270208961e3680d40305f}\label{classRhymeDictionary_1_1IPA_a6bc43eb0336270208961e3680d40305f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Open@{Open}}
+\index{Open@{Open}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Open}{Open}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Open = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}a\textquotesingle{}, \textquotesingle{}á\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a71ff3cac9a9aacecddc1879525d45423}\label{classRhymeDictionary_1_1IPA_a71ff3cac9a9aacecddc1879525d45423}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!OpenClosed@{OpenClosed}}
+\index{OpenClosed@{OpenClosed}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{OpenClosed}{OpenClosed}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Open\+Closed = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}e\textquotesingle{}, \textquotesingle{}é\textquotesingle{}, \textquotesingle{}o\textquotesingle{}, \textquotesingle{}ó\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a785a4d7c9eb12e5b96752a41a2b473d5}\label{classRhymeDictionary_1_1IPA_a785a4d7c9eb12e5b96752a41a2b473d5}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Palatal@{Palatal}}
+\index{Palatal@{Palatal}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Palatal}{Palatal}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Palatal = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}ť\textquotesingle{}, \textquotesingle{}ď\textquotesingle{}, \textquotesingle{}ň\textquotesingle{}, \textquotesingle{}j\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ae4b515e4fb0804fd4af13c26472df443}\label{classRhymeDictionary_1_1IPA_ae4b515e4fb0804fd4af13c26472df443}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!phoneticMatrix@{phoneticMatrix}}
+\index{phoneticMatrix@{phoneticMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{phoneticMatrix}{phoneticMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}} Rhyme\+Dictionary.\+IPA.\+phonetic\+Matrix = new \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aaeed1fb57e33b6a0c1d43ff0494f7186}\label{classRhymeDictionary_1_1IPA_aaeed1fb57e33b6a0c1d43ff0494f7186}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!phonologicMatrix@{phonologicMatrix}}
+\index{phonologicMatrix@{phonologicMatrix}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{phonologicMatrix}{phonologicMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}} Rhyme\+Dictionary.\+IPA.\+phonologic\+Matrix = new \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ae4f3f1d41987e52c74404aa999e65e6d}\label{classRhymeDictionary_1_1IPA_ae4f3f1d41987e52c74404aa999e65e6d}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Plosive@{Plosive}}
+\index{Plosive@{Plosive}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Plosive}{Plosive}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Plosive = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}p\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}t\textquotesingle{}, \textquotesingle{}d\textquotesingle{}, \textquotesingle{}ť\textquotesingle{}, \textquotesingle{}ď\textquotesingle{}, \textquotesingle{}k\textquotesingle{}, \textquotesingle{}g\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aea9667e95cc4f5bd5d9a1771abc6e05f}\label{classRhymeDictionary_1_1IPA_aea9667e95cc4f5bd5d9a1771abc6e05f}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Rules@{Rules}}
+\index{Rules@{Rules}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Rules}{Rules}}
+{\footnotesize\ttfamily string \mbox{[},\mbox{]} Rhyme\+Dictionary.\+IPA.\+Rules\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Inicializační hodnota\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} \textcolor{keywordtype}{string}[,]  \{}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ch"{}}, \textcolor{stringliteral}{"{}ȟ"{}}\},}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}di"{}}, \textcolor{stringliteral}{"{}ďi"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}dí"{}}, \textcolor{stringliteral}{"{}ďí"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ti"{}}, \textcolor{stringliteral}{"{}ťi"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}tí"{}}, \textcolor{stringliteral}{"{}ťí"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ni"{}}, \textcolor{stringliteral}{"{}ňi"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ní"{}}, \textcolor{stringliteral}{"{}ňí"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}dě"{}}, \textcolor{stringliteral}{"{}ďe"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}tě"{}}, \textcolor{stringliteral}{"{}ťe"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ně"{}}, \textcolor{stringliteral}{"{}ňe"{}} \},}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}mě"{}}, \textcolor{stringliteral}{"{}mňe"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ě"{}}, \textcolor{stringliteral}{"{}je"{}} \},}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}c"{}}, \textcolor{stringliteral}{"{}ts"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}č"{}}, \textcolor{stringliteral}{"{}tš"{}} \},}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}y"{}}, \textcolor{stringliteral}{"{}i"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ý"{}}, \textcolor{stringliteral}{"{}í"{}} \},}
+\DoxyCodeLine{                                                        }
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}q"{}}, \textcolor{stringliteral}{"{}kv"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}ů"{}}, \textcolor{stringliteral}{"{}ú"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}x"{}}, \textcolor{stringliteral}{"{}ks"{}} \},}
+\DoxyCodeLine{                                                        \{ \textcolor{stringliteral}{"{}w"{}}, \textcolor{stringliteral}{"{}v"{}} \} \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_ad713b2c6ff4f5e3fcc74ace5f16b01f4}\label{classRhymeDictionary_1_1IPA_ad713b2c6ff4f5e3fcc74ace5f16b01f4}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!tolerance@{tolerance}}
+\index{tolerance@{tolerance}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{tolerance}{tolerance}}
+{\footnotesize\ttfamily float Rhyme\+Dictionary.\+IPA.\+tolerance = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_aa4b560ad103f8156524fa6ce60a3fe2c}\label{classRhymeDictionary_1_1IPA_aa4b560ad103f8156524fa6ce60a3fe2c}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Trill@{Trill}}
+\index{Trill@{Trill}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Trill}{Trill}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Trill = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}r\textquotesingle{}, \textquotesingle{}ř\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a8ecea7b1579c41e97a42efe20ebeaee5}\label{classRhymeDictionary_1_1IPA_a8ecea7b1579c41e97a42efe20ebeaee5}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!Velar@{Velar}}
+\index{Velar@{Velar}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{Velar}{Velar}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Velar = new char\mbox{[}$\,$\mbox{]} \{ \textquotesingle{}k\textquotesingle{}, \textquotesingle{}g\textquotesingle{}, \textquotesingle{}ȟ\textquotesingle{} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a3082e8f605dba3d0339494d1246ed5d5}\label{classRhymeDictionary_1_1IPA_a3082e8f605dba3d0339494d1246ed5d5}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!VocalHorizontal@{VocalHorizontal}}
+\index{VocalHorizontal@{VocalHorizontal}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{VocalHorizontal}{VocalHorizontal}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Vocal\+Horizontal = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_aa7f61f69bccccee7d27c6fafbbf64e81}{Front}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ac0f4e54b4547d66d101beb53eb81f34f}{Back}} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a7203d7be2ac6d6fceeb91efdd6e884e8}\label{classRhymeDictionary_1_1IPA_a7203d7be2ac6d6fceeb91efdd6e884e8}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!VocalVertical@{VocalVertical}}
+\index{VocalVertical@{VocalVertical}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{VocalVertical}{VocalVertical}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Vocal\+Vertical = new char\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a5657153c6aa8801def659a8fbbc00a48}{Closed}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a71ff3cac9a9aacecddc1879525d45423}{Open\+Closed}}, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a6bc43eb0336270208961e3680d40305f}{Open}} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1IPA_a2482b42fa8ae969dc208a0618bf49b80}\label{classRhymeDictionary_1_1IPA_a2482b42fa8ae969dc208a0618bf49b80}} 
+\index{RhymeDictionary.IPA@{RhymeDictionary.IPA}!VoicePairs@{VoicePairs}}
+\index{VoicePairs@{VoicePairs}!RhymeDictionary.IPA@{RhymeDictionary.IPA}}
+\doxysubsubsection{\texorpdfstring{VoicePairs}{VoicePairs}}
+{\footnotesize\ttfamily char \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+IPA.\+Voice\+Pairs\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Inicializační hodnota\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} \textcolor{keywordtype}{char}[][] \{ \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'p'}, \textcolor{charliteral}{'b'} \}, }
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'t'}, \textcolor{charliteral}{'d'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{stringliteral}{'ť'}, \textcolor{stringliteral}{'ď'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'k'}, \textcolor{charliteral}{'g'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'f'}, \textcolor{charliteral}{'v'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'s'}, \textcolor{charliteral}{'z'} \},}
+\DoxyCodeLine{                                                        \textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{stringliteral}{'š'}, \textcolor{stringliteral}{'ž'} \} \}}
+
+\end{DoxyCode}
+
+
+Dokumentace pro tuto třídu byla vygenerována z následujícího souboru\+:\begin{DoxyCompactItemize}
+\item 
+classes/\mbox{\hyperlink{IPA_8cs}{IPA.\+cs}}\end{DoxyCompactItemize}

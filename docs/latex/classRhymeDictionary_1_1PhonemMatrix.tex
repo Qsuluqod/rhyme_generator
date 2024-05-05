@@ -1,0 +1,193 @@
+\hypertarget{classRhymeDictionary_1_1PhonemMatrix}{}\doxysection{Dokumentace třídy Rhyme\+Dictionary.\+Phonem\+Matrix}
+\label{classRhymeDictionary_1_1PhonemMatrix}\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+
+
+Matice podobností fonémů. Jejím hlavním attributem je Matice, kde pro každá dvě písmena máme míru jejich podobnosti. Písmena jsou reprezentována opět čísly, takže například vztah mezi písmeny b a p najdeme na souřadnicích \mbox{[}2, 21\mbox{]} nebo \mbox{[}21, 2\mbox{]} (b je třetí foném a b dvacátý druhý). Relace podobnosti je symetrická, tudíž i matice je symetrická. Diagonála by vždy měla být vyplněna samými jedničkami, ježto stejná písmena jsou si nejpodobnější a všechna ostatní čísla by neměla převyšovat jedničku, ani být nižší než nula. Po vygenerování matice můžeme rovnou pro každé písmeno vygenerovat seřazené pole jeho nejlepších podobností, aby se to nemuselo dělat pokaždé znova.   
+
+
+\doxysubsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a025e18a0f14717ec19cde7edd7e910df}{Get\+Best\+Letters\+For\+Letter}} (int letter, int count, float minimal\+\_\+rate=0f)
+\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_ab8c3b7112896d0ee6825ec64d9fd2e01}{Generate\+Best\+Letters}} ()
+\begin{DoxyCompactList}\small\item\em Vyplní pole nejlepších podobností a jejich mír pro všechna písmena.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_aed19ee8582cdf5af27fdee99a85b6f19}{Generate\+Best\+Letters\+For\+Letter}} (int letter)
+\begin{DoxyCompactList}\small\item\em Vyplní pole nejlepších podobností a jejich mír pro jedno písmeno.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a2e6cf850029d16c8f3773891e7c27638}{Create\+Relation\+Using\+Char}} (char\mbox{[}$\,$\mbox{]} group, float rate)
+\begin{DoxyCompactList}\small\item\em Předá funkci \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}{Create\+Relation()}} seznam číselné reprezentace znaků.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}{Create\+Relation}} (int\mbox{[}$\,$\mbox{]} group, float rate)
+\begin{DoxyCompactList}\small\item\em Vytvoří relaci (zvýši míry podobností) mezi skupinou fonémů. Zvýší míru mezi každými dvěma fonémy ve skupině.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a4cee6de3d8969d01e29b4f045aaa422c}{Phonem\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a4095994a86e986934e297d8860b45df6}{Print\+Best\+Letters}} ()
+\begin{DoxyCompactList}\small\item\em Vypíše tabulky nejlepších podobností pro všechna písmena.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a3e375685854ece700bf7f79337a45c29}{Print\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Vytiskne matici podobností v intuitivní podobě s obarvenými mírami podobností.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a3b1cb05c618682cb0394e87cd3cd5f45}{Fill\+With}} (float filling)
+\begin{DoxyCompactList}\small\item\em Zaplní celou matici jedním číslem.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[},\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_add1e706b5bc8952b2148ecf401dc6791}{Matrix}}
+\item 
+int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a5d06c6fb064719ae2fe55655367e8706}{Best\+Letters}} = new int\mbox{[}\mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}\mbox{]}\mbox{[}$\,$\mbox{]}
+\item 
+float\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_ae89b184fa6d41fb5967d39a65f1212b8}{Rate\+Of\+Best\+Letters}} = new float\mbox{[}\mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}\mbox{]}\mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Privátní atributy}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_a2eba0ad5cfa66cf996978203a8086aaf}{extent}} = \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Matice podobností fonémů. Jejím hlavním attributem je Matice, kde pro každá dvě písmena máme míru jejich podobnosti. Písmena jsou reprezentována opět čísly, takže například vztah mezi písmeny b a p najdeme na souřadnicích \mbox{[}2, 21\mbox{]} nebo \mbox{[}21, 2\mbox{]} (b je třetí foném a b dvacátý druhý). Relace podobnosti je symetrická, tudíž i matice je symetrická. Diagonála by vždy měla být vyplněna samými jedničkami, ježto stejná písmena jsou si nejpodobnější a všechna ostatní čísla by neměla převyšovat jedničku, ani být nižší než nula. Po vygenerování matice můžeme rovnou pro každé písmeno vygenerovat seřazené pole jeho nejlepších podobností, aby se to nemuselo dělat pokaždé znova.  
+
+\doxysubsection{Dokumentace konstruktoru a destruktoru}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a4cee6de3d8969d01e29b4f045aaa422c}\label{classRhymeDictionary_1_1PhonemMatrix_a4cee6de3d8969d01e29b4f045aaa422c}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!PhonemMatrix@{PhonemMatrix}}
+\index{PhonemMatrix@{PhonemMatrix}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{PhonemMatrix()}{PhonemMatrix()}}
+{\footnotesize\ttfamily Rhyme\+Dictionary.\+Phonem\+Matrix.\+Phonem\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor  
+
+
+
+\doxysubsection{Dokumentace členských funkcí}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}\label{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!CreateRelation@{CreateRelation}}
+\index{CreateRelation@{CreateRelation}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{CreateRelation()}{CreateRelation()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Create\+Relation (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{group,  }\item[{float}]{rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vytvoří relaci (zvýši míry podobností) mezi skupinou fonémů. Zvýší míru mezi každými dvěma fonémy ve skupině.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em group} & Seznam fonémů.\\
+\hline
+{\em rate} & Míra, o kterou se zvýší míra podobnosti.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a2e6cf850029d16c8f3773891e7c27638}\label{classRhymeDictionary_1_1PhonemMatrix_a2e6cf850029d16c8f3773891e7c27638}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!CreateRelationUsingChar@{CreateRelationUsingChar}}
+\index{CreateRelationUsingChar@{CreateRelationUsingChar}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{CreateRelationUsingChar()}{CreateRelationUsingChar()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Create\+Relation\+Using\+Char (\begin{DoxyParamCaption}\item[{char\mbox{[}$\,$\mbox{]}}]{group,  }\item[{float}]{rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Předá funkci \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}{Create\+Relation()}} seznam číselné reprezentace znaků.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em group} & Seznam fonémů ve znakové reprezentaci.\\
+\hline
+{\em rate} & Míra, o kterou se zvýší podobnost zavoláním \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix_afd8fc6013c4681f5bbca238bc2f9fe10}{Create\+Relation()}}.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a3b1cb05c618682cb0394e87cd3cd5f45}\label{classRhymeDictionary_1_1PhonemMatrix_a3b1cb05c618682cb0394e87cd3cd5f45}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!FillWith@{FillWith}}
+\index{FillWith@{FillWith}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{FillWith()}{FillWith()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Fill\+With (\begin{DoxyParamCaption}\item[{float}]{filling }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zaplní celou matici jedním číslem.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em filling} & Číslo, kterým zaplní celou matici.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_ab8c3b7112896d0ee6825ec64d9fd2e01}\label{classRhymeDictionary_1_1PhonemMatrix_ab8c3b7112896d0ee6825ec64d9fd2e01}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!GenerateBestLetters@{GenerateBestLetters}}
+\index{GenerateBestLetters@{GenerateBestLetters}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{GenerateBestLetters()}{GenerateBestLetters()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Generate\+Best\+Letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vyplní pole nejlepších podobností a jejich mír pro všechna písmena.  
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_aed19ee8582cdf5af27fdee99a85b6f19}\label{classRhymeDictionary_1_1PhonemMatrix_aed19ee8582cdf5af27fdee99a85b6f19}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!GenerateBestLettersForLetter@{GenerateBestLettersForLetter}}
+\index{GenerateBestLettersForLetter@{GenerateBestLettersForLetter}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{GenerateBestLettersForLetter()}{GenerateBestLettersForLetter()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Generate\+Best\+Letters\+For\+Letter (\begin{DoxyParamCaption}\item[{int}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vyplní pole nejlepších podobností a jejich mír pro jedno písmeno.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Písmeno, pro které vyplňujeme podobnosti a jejich míry.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a025e18a0f14717ec19cde7edd7e910df}\label{classRhymeDictionary_1_1PhonemMatrix_a025e18a0f14717ec19cde7edd7e910df}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!GetBestLettersForLetter@{GetBestLettersForLetter}}
+\index{GetBestLettersForLetter@{GetBestLettersForLetter}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{GetBestLettersForLetter()}{GetBestLettersForLetter()}}
+{\footnotesize\ttfamily int\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+Phonem\+Matrix.\+Get\+Best\+Letters\+For\+Letter (\begin{DoxyParamCaption}\item[{int}]{letter,  }\item[{int}]{count,  }\item[{float}]{minimal\+\_\+rate = {\ttfamily 0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a4095994a86e986934e297d8860b45df6}\label{classRhymeDictionary_1_1PhonemMatrix_a4095994a86e986934e297d8860b45df6}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!PrintBestLetters@{PrintBestLetters}}
+\index{PrintBestLetters@{PrintBestLetters}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{PrintBestLetters()}{PrintBestLetters()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Print\+Best\+Letters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vypíše tabulky nejlepších podobností pro všechna písmena.  
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a3e375685854ece700bf7f79337a45c29}\label{classRhymeDictionary_1_1PhonemMatrix_a3e375685854ece700bf7f79337a45c29}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!PrintMatrix@{PrintMatrix}}
+\index{PrintMatrix@{PrintMatrix}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{PrintMatrix()}{PrintMatrix()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Phonem\+Matrix.\+Print\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vytiskne matici podobností v intuitivní podobě s obarvenými mírami podobností.  
+
+
+
+\doxysubsection{Dokumentace datových členů}
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a5d06c6fb064719ae2fe55655367e8706}\label{classRhymeDictionary_1_1PhonemMatrix_a5d06c6fb064719ae2fe55655367e8706}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!BestLetters@{BestLetters}}
+\index{BestLetters@{BestLetters}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{BestLetters}{BestLetters}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+Phonem\+Matrix.\+Best\+Letters = new int\mbox{[}\mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}\mbox{]}\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_a2eba0ad5cfa66cf996978203a8086aaf}\label{classRhymeDictionary_1_1PhonemMatrix_a2eba0ad5cfa66cf996978203a8086aaf}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!extent@{extent}}
+\index{extent@{extent}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{extent}{extent}}
+{\footnotesize\ttfamily int Rhyme\+Dictionary.\+Phonem\+Matrix.\+extent = \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_add1e706b5bc8952b2148ecf401dc6791}\label{classRhymeDictionary_1_1PhonemMatrix_add1e706b5bc8952b2148ecf401dc6791}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{Matrix}{Matrix}}
+{\footnotesize\ttfamily float \mbox{[},\mbox{]} Rhyme\+Dictionary.\+Phonem\+Matrix.\+Matrix}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1PhonemMatrix_ae89b184fa6d41fb5967d39a65f1212b8}\label{classRhymeDictionary_1_1PhonemMatrix_ae89b184fa6d41fb5967d39a65f1212b8}} 
+\index{RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}!RateOfBestLetters@{RateOfBestLetters}}
+\index{RateOfBestLetters@{RateOfBestLetters}!RhymeDictionary.PhonemMatrix@{RhymeDictionary.PhonemMatrix}}
+\doxysubsubsection{\texorpdfstring{RateOfBestLetters}{RateOfBestLetters}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+Phonem\+Matrix.\+Rate\+Of\+Best\+Letters = new float\mbox{[}\mbox{\hyperlink{classRhymeDictionary_1_1IPA_a7308ed458f2227f3bc0a7b7a6cc9ffad}{IPA.\+num\+\_\+of\+\_\+chars}}\mbox{]}\mbox{[}$\,$\mbox{]}}
+
+
+
+Dokumentace pro tuto třídu byla vygenerována z následujícího souboru\+:\begin{DoxyCompactItemize}
+\item 
+classes/\mbox{\hyperlink{PhonemMatrix_8cs}{Phonem\+Matrix.\+cs}}\end{DoxyCompactItemize}

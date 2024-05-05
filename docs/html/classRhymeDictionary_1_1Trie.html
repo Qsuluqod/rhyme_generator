@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Slovník rýmů: Dokumentace třídy RhymeDictionary.Trie</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Slovník rýmů
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Vygenerováno programem Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítám...</div>
+<div class="SRStatus" id="Searching">Vyhledávám...</div>
+<div class="SRStatus" id="NoMatches">Nebylo nic nalezeno</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceRhymeDictionary.html">RhymeDictionary</a></li><li class="navelem"><a class="el" href="classRhymeDictionary_1_1Trie.html">Trie</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Veřejné metody</a> &#124;
+<a href="#pri-methods">Privátní metody</a> &#124;
+<a href="#pri-attribs">Privátní atributy</a> &#124;
+<a href="classRhymeDictionary_1_1Trie-members.html">Seznam všech členů</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentace třídy RhymeDictionary.Trie</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Reprezentace stromu <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a>. Slova v trii jsou uložená ve fonetické transkripci a každý foném je reprezentovaný číslem, kvůli následnému rychlejšímu indexovaní. Slova jsou také uložená pozpátku, aby se v Trii dali efektivně hledat rýmy.   
+ <a href="classRhymeDictionary_1_1Trie.html#details">...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Veřejné metody</h2></td></tr>
+<tr class="memitem:a47a005974f4187fb292e861853fc6415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a47a005974f4187fb292e861853fc6415">BuildFromFile</a> (string path, char separator)</td></tr>
+<tr class="memdesc:a47a005974f4187fb292e861853fc6415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postaví strom <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a> z csv souboru.   <a href="classRhymeDictionary_1_1Trie.html#a47a005974f4187fb292e861853fc6415">...</a><br /></td></tr>
+<tr class="separator:a47a005974f4187fb292e861853fc6415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ee5329d0ea65ea3a4fcfee28aebcfa"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classRhymeDictionary_1_1Rhyme.html">Rhyme</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a98ee5329d0ea65ea3a4fcfee28aebcfa">FindRhymesWithTolerance</a> (int[] _word, int _depth, float tolerance, <a class="el" href="classRhymeDictionary_1_1PhonemMatrix.html">PhonemMatrix</a> matrix)</td></tr>
+<tr class="memdesc:a98ee5329d0ea65ea3a4fcfee28aebcfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najde rýmy pro slovo za použití Matice podobností hlásek. Rýmy hledá s určitou tolerancí.   <a href="classRhymeDictionary_1_1Trie.html#a98ee5329d0ea65ea3a4fcfee28aebcfa">...</a><br /></td></tr>
+<tr class="separator:a98ee5329d0ea65ea3a4fcfee28aebcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe86e81d9a6f5b37f9541eda5ef3c76d"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#abe86e81d9a6f5b37f9541eda5ef3c76d">FindRhymes</a> (int[] _word, int _depth, <a class="el" href="classRhymeDictionary_1_1IPA.html#a562b779216d14ecddc3ca3a899e50730">IPA.SimilarLetters</a> similarLetters)</td></tr>
+<tr class="memdesc:abe86e81d9a6f5b37f9541eda5ef3c76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najde rýmy za použití podobností funkce pro hlásky. Rýmy nehledá s nějakou tolerancí.   <a href="classRhymeDictionary_1_1Trie.html#abe86e81d9a6f5b37f9541eda5ef3c76d">...</a><br /></td></tr>
+<tr class="separator:abe86e81d9a6f5b37f9541eda5ef3c76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bdb2b49b6d09fdc8cd332b63ba7c17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a52bdb2b49b6d09fdc8cd332b63ba7c17">PrintTrie</a> (bool verbose=false)</td></tr>
+<tr class="memdesc:a52bdb2b49b6d09fdc8cd332b63ba7c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vypíše strom trie do konzole v přehledném schéma.   <a href="classRhymeDictionary_1_1Trie.html#a52bdb2b49b6d09fdc8cd332b63ba7c17">...</a><br /></td></tr>
+<tr class="separator:a52bdb2b49b6d09fdc8cd332b63ba7c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75059f38ff496e9e5c0fe41f57f82359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a75059f38ff496e9e5c0fe41f57f82359">Trie</a> ()</td></tr>
+<tr class="memdesc:a75059f38ff496e9e5c0fe41f57f82359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor   <a href="classRhymeDictionary_1_1Trie.html#a75059f38ff496e9e5c0fe41f57f82359">...</a><br /></td></tr>
+<tr class="separator:a75059f38ff496e9e5c0fe41f57f82359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Privátní metody</h2></td></tr>
+<tr class="memitem:a93a7ea7b01dff011c1a12d848871bce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRhymeDictionary_1_1Node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a93a7ea7b01dff011c1a12d848871bce6">FindNodeForWord</a> (int[] word)</td></tr>
+<tr class="memdesc:a93a7ea7b01dff011c1a12d848871bce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najde v <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a> vrchol pro dané slovo, pokuď po cestě potřebuje vytvořit vrcholy, tak je vytvoří.   <a href="classRhymeDictionary_1_1Trie.html#a93a7ea7b01dff011c1a12d848871bce6">...</a><br /></td></tr>
+<tr class="separator:a93a7ea7b01dff011c1a12d848871bce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Privátní atributy</h2></td></tr>
+<tr class="memitem:a6f66d2af44e4dbea9e70fcda7187ebb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRhymeDictionary_1_1Node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRhymeDictionary_1_1Trie.html#a6f66d2af44e4dbea9e70fcda7187ebb3">Root</a> = new <a class="el" href="classRhymeDictionary_1_1Node.html">Node</a>(-1, 0)</td></tr>
+<tr class="separator:a6f66d2af44e4dbea9e70fcda7187ebb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailní popis</h2>
+<div class="textblock"><p >Reprezentace stromu <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a>. Slova v trii jsou uložená ve fonetické transkripci a každý foném je reprezentovaný číslem, kvůli následnému rychlejšímu indexovaní. Slova jsou také uložená pozpátku, aby se v Trii dali efektivně hledat rýmy.  </p>
+</div><h2 class="groupheader">Dokumentace konstruktoru a destruktoru</h2>
+<a id="a75059f38ff496e9e5c0fe41f57f82359" name="a75059f38ff496e9e5c0fe41f57f82359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75059f38ff496e9e5c0fe41f57f82359">&#9670;&#160;</a></span>Trie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RhymeDictionary.Trie.Trie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konstruktor  </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace členských funkcí</h2>
+<a id="a47a005974f4187fb292e861853fc6415" name="a47a005974f4187fb292e861853fc6415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a005974f4187fb292e861853fc6415">&#9670;&#160;</a></span>BuildFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RhymeDictionary.Trie.BuildFromFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>separator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Postaví strom <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a> z csv souboru.  </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Cesta k souboru </td></tr>
+    <tr><td class="paramname">separator</td><td>Znak, jímž jsou slova v souboru oddělená </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93a7ea7b01dff011c1a12d848871bce6" name="a93a7ea7b01dff011c1a12d848871bce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a7ea7b01dff011c1a12d848871bce6">&#9670;&#160;</a></span>FindNodeForWord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRhymeDictionary_1_1Node.html">Node</a> RhymeDictionary.Trie.FindNodeForWord </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Najde v <a class="el" href="classRhymeDictionary_1_1Trie.html" title="Reprezentace stromu Trie. Slova v trii jsou uložená ve fonetické transkripci a každý foném je repreze...">Trie</a> vrchol pro dané slovo, pokuď po cestě potřebuje vytvořit vrcholy, tak je vytvoří.  </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">word</td><td>Slovo, pro které hledá vrchol </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Vrchol, kam můžeme slovo uložit </dd></dl>
+
+</div>
+</div>
+<a id="abe86e81d9a6f5b37f9541eda5ef3c76d" name="abe86e81d9a6f5b37f9541eda5ef3c76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe86e81d9a6f5b37f9541eda5ef3c76d">&#9670;&#160;</a></span>FindRhymes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; string &gt; RhymeDictionary.Trie.FindRhymes </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>_word</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRhymeDictionary_1_1IPA.html#a562b779216d14ecddc3ca3a899e50730">IPA.SimilarLetters</a>&#160;</td>
+          <td class="paramname"><em>similarLetters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Najde rýmy za použití podobností funkce pro hlásky. Rýmy nehledá s nějakou tolerancí.  </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_word</td><td>Slovo, pro které hledá rýmy.</td></tr>
+    <tr><td class="paramname">_depth</td><td>Počet, kolik posledních písmen slov, se ještě musí rýmovat.</td></tr>
+    <tr><td class="paramname">similarLetters</td><td>Funkce, podle které vyhledávání nachází podobná písmena.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Seznam nalezených rýmů.</dd></dl>
+
+</div>
+</div>
+<a id="a98ee5329d0ea65ea3a4fcfee28aebcfa" name="a98ee5329d0ea65ea3a4fcfee28aebcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ee5329d0ea65ea3a4fcfee28aebcfa">&#9670;&#160;</a></span>FindRhymesWithTolerance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classRhymeDictionary_1_1Rhyme.html">Rhyme</a> &gt; RhymeDictionary.Trie.FindRhymesWithTolerance </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>_word</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRhymeDictionary_1_1PhonemMatrix.html">PhonemMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Najde rýmy pro slovo za použití Matice podobností hlásek. Rýmy hledá s určitou tolerancí.  </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_word</td><td>Slovo, pro které hledá rým. </td></tr>
+    <tr><td class="paramname">_depth</td><td>Počet, kolik posledních písmen slov, se ještě musí rýmovat. </td></tr>
+    <tr><td class="paramname">tolerance</td><td>Desetinné číslo od 0 do 1, jak moc musí být nalezený rým dokonalý. </td></tr>
+    <tr><td class="paramname">matrix</td><td>Matice podobností hlásek, podle které hledá podobná písmena. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>Seznam nalezených rýmů. </dd></dl>
+
+</div>
+</div>
+<a id="a52bdb2b49b6d09fdc8cd332b63ba7c17" name="a52bdb2b49b6d09fdc8cd332b63ba7c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bdb2b49b6d09fdc8cd332b63ba7c17">&#9670;&#160;</a></span>PrintTrie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RhymeDictionary.Trie.PrintTrie </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vypíše strom trie do konzole v přehledném schéma.  </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">verbose</td><td>O vrcholech vypíše dodatečné množství informací, převážně pro debugování.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace datových členů</h2>
+<a id="a6f66d2af44e4dbea9e70fcda7187ebb3" name="a6f66d2af44e4dbea9e70fcda7187ebb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f66d2af44e4dbea9e70fcda7187ebb3">&#9670;&#160;</a></span>Root</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRhymeDictionary_1_1Node.html">Node</a> RhymeDictionary.Trie.Root = new <a class="el" href="classRhymeDictionary_1_1Node.html">Node</a>(-1, 0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla vygenerována z následujícího souboru:<ul>
+<li>classes/<a class="el" href="Trie_8cs.html">Trie.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Vygenerováno programem&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

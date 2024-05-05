@@ -1,0 +1,21 @@
+\hypertarget{namespaceRhymeDictionary}{}\doxysection{Dokumentace jmenného prostoru Rhyme\+Dictionary}
+\label{namespaceRhymeDictionary}\index{RhymeDictionary@{RhymeDictionary}}
+\doxysubsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1IPA}{IPA}}
+\begin{DoxyCompactList}\small\item\em Třída, kde jsou uloženy všechny fonetické a fonologické vlastnosti písmen, na jejichž základě zvládne sestavit matici podobnosti nebo udržet funkce podobnosti.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1March}{March}}
+\begin{DoxyCompactList}\small\item\em Reprezentuje jeden průchod hledání do hloubky ve stromu \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}}
+\begin{DoxyCompactList}\small\item\em Reprezentuje Jeden vrchol ve strom \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Matice podobností fonémů. Jejím hlavním attributem je Matice, kde pro každá dvě písmena máme míru jejich podobnosti. Písmena jsou reprezentována opět čísly, takže například vztah mezi písmeny b a p najdeme na souřadnicích \mbox{[}2, 21\mbox{]} nebo \mbox{[}21, 2\mbox{]} (b je třetí foném a b dvacátý druhý). Relace podobnosti je symetrická, tudíž i matice je symetrická. Diagonála by vždy měla být vyplněna samými jedničkami, ježto stejná písmena jsou si nejpodobnější a všechna ostatní čísla by neměla převyšovat jedničku, ani být nižší než nula. Po vygenerování matice můžeme rovnou pro každé písmeno vygenerovat seřazené pole jeho nejlepších podobností, aby se to nemuselo dělat pokaždé znova.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1Rhyme}{Rhyme}}
+\begin{DoxyCompactList}\small\item\em Reprezentace rýmu, obsahuje finální slovo zapsané ortografickým úzusem a míru rýmu. To jest číslo od 1 do 0, které vznikne vynásobením určitého počtu mír podobnosti mezi písmeny v rýmu a slovem, pro něhož rýmy hledáme. Například pro slova neví a trefí, kdyby byla míra podobnosti mezi v a f 0.\+8, bude pro poslední tři písmena míra podobnosti 0.\+8. K tomuto číslu jsme došli výpočtem 1 $\ast$ 0.\+8 $\ast$ 1. Míry podobností mezi stejnými písmeny jsou totiž vždy jedna.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1RhymeDictionary}{Rhyme\+Dictionary}}
+\begin{DoxyCompactList}\small\item\em Hlavní řídící struktura, která incializuje ostatní třídy a udělá základní prezentaci programu.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1Tools}{Tools}}
+\begin{DoxyCompactList}\small\item\em Tato třída obsahuje různé vychytávky, určené pouze pro vypisování do konzole převážně pro účely debugování.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}
+\begin{DoxyCompactList}\small\item\em Reprezentace stromu \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}. Slova v trii jsou uložená ve fonetické transkripci a každý foném je reprezentovaný číslem, kvůli následnému rychlejšímu indexovaní. Slova jsou také uložená pozpátku, aby se v Trii dali efektivně hledat rýmy.  \end{DoxyCompactList}\end{DoxyCompactItemize}

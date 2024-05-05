@@ -1,0 +1,29 @@
+/home/mprokopic/Prog/student-prokoma1/bin/Debug/net7.0/student-prokoma1
+/home/mprokopic/Prog/student-prokoma1/bin/Debug/net7.0/student-prokoma1.deps.json
+/home/mprokopic/Prog/student-prokoma1/bin/Debug/net7.0/student-prokoma1.runtimeconfig.json
+/home/mprokopic/Prog/student-prokoma1/bin/Debug/net7.0/student-prokoma1.dll
+/home/mprokopic/Prog/student-prokoma1/bin/Debug/net7.0/student-prokoma1.pdb
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.csproj.AssemblyReference.cache
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.GeneratedMSBuildEditorConfig.editorconfig
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.AssemblyInfoInputs.cache
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.AssemblyInfo.cs
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.csproj.CoreCompileInputs.cache
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.dll
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/refint/student-prokoma1.dll
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.pdb
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/student-prokoma1.genruntimeconfig.cache
+/home/mprokopic/Prog/student-prokoma1/obj/Debug/net7.0/ref/student-prokoma1.dll
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.GeneratedMSBuildEditorConfig.editorconfig
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.AssemblyInfoInputs.cache
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.AssemblyInfo.cs
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.csproj.CoreCompileInputs.cache
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.dll
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/refint/student-prokoma1.dll
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.pdb
+P:/Ostatní Programování/student-prokoma1/bin/Debug/net7.0/student-prokoma1.exe
+P:/Ostatní Programování/student-prokoma1/bin/Debug/net7.0/student-prokoma1.deps.json
+P:/Ostatní Programování/student-prokoma1/bin/Debug/net7.0/student-prokoma1.runtimeconfig.json
+P:/Ostatní Programování/student-prokoma1/bin/Debug/net7.0/student-prokoma1.dll
+P:/Ostatní Programování/student-prokoma1/bin/Debug/net7.0/student-prokoma1.pdb
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/student-prokoma1.genruntimeconfig.cache
+P:/Ostatní Programování/student-prokoma1/obj/Debug/net7.0/ref/student-prokoma1.dll

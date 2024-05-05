@@ -1,0 +1,33 @@
+\hypertarget{parser_8py}{}\doxysection{Dokumentace souboru words\+\_\+data/parser.py}
+\label{parser_8py}\index{words\_data/parser.py@{words\_data/parser.py}}
+\doxysubsection*{Jmenné prostory}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceparser}{parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceparser_aff3b2396f2b43a588b1399d2400e6eee}{parser.\+ilegal}} (word)
+\item 
+def \mbox{\hyperlink{namespaceparser_aac30d1f334ee86024e9e654a2fda8392}{parser.\+legal}} (word)
+\end{DoxyCompactItemize}
+\doxysubsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceparser_a4bd5277041a6cb190182c8e39c521fea}{parser.\+input\+\_\+file}} = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}capek1.\+csv\char`\"{}, \char`\"{}r\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceparser_a7c4440e954dda8984cdde9e0cd26d91e}{parser.\+output\+\_\+file}} = open(\char`\"{}P\+:\textbackslash{}\+Ostatní Programování\textbackslash{}student-\/prokoma1\textbackslash{}slova\+\_\+data\textbackslash{}data.\+txt\char`\"{}, \char`\"{}w\char`\"{}, encoding=\char`\"{}utf-\/8\char`\"{})
+\item 
+string \mbox{\hyperlink{namespaceparser_a76d1bed704b5ab3184c1a93452be6aae}{parser.\+allowed}} = \char`\"{}aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceparser_aa765ed3a36701fbf594efcdcd424ba49}{parser.\+not\+\_\+allowed}} = \char`\"{}.\textbackslash{}\char`\"{},;0123456789?!@\#\$\%$^\wedge$\&$\ast$()-\/+$\ast$/\char`\"{}
+\item 
+int \mbox{\hyperlink{namespaceparser_a181aeae6908a5f2d4df947a54563a3da}{parser.\+count}} = 0
+\item 
+bool \mbox{\hyperlink{namespaceparser_a1fb8f7dbdddc275ac94a29a8ab6f6f83}{parser.\+first}} = True
+\item 
+\mbox{\hyperlink{namespaceparser_a0fdcf615eed8bf4f214d8c391774ff18}{parser.\+line}} = input\+\_\+file.\+readline()
+\item 
+\mbox{\hyperlink{namespaceparser_a30298e7790b6940580c63fe289b65b6b}{parser.\+word}} = line.\+split(\char`\"{};\char`\"{})\mbox{[}1\mbox{]}\mbox{[}1\+:-\/1\mbox{]}.strip().lower()
+\end{DoxyCompactItemize}

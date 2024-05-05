@@ -1,0 +1,159 @@
+\hypertarget{classRhymeDictionary_1_1Trie}{}\doxysection{Dokumentace třídy Rhyme\+Dictionary.\+Trie}
+\label{classRhymeDictionary_1_1Trie}\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+
+
+Reprezentace stromu \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}. Slova v trii jsou uložená ve fonetické transkripci a každý foném je reprezentovaný číslem, kvůli následnému rychlejšímu indexovaní. Slova jsou také uložená pozpátku, aby se v Trii dali efektivně hledat rýmy.   
+
+
+\doxysubsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1Trie_a47a005974f4187fb292e861853fc6415}{Build\+From\+File}} (string path, char separator)
+\begin{DoxyCompactList}\small\item\em Postaví strom \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}} z csv souboru.  \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classRhymeDictionary_1_1Rhyme}{Rhyme}} $>$ \mbox{\hyperlink{classRhymeDictionary_1_1Trie_a98ee5329d0ea65ea3a4fcfee28aebcfa}{Find\+Rhymes\+With\+Tolerance}} (int\mbox{[}$\,$\mbox{]} \+\_\+word, int \+\_\+depth, float tolerance, \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}} matrix)
+\begin{DoxyCompactList}\small\item\em Najde rýmy pro slovo za použití Matice podobností hlásek. Rýmy hledá s určitou tolerancí.  \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{classRhymeDictionary_1_1Trie_abe86e81d9a6f5b37f9541eda5ef3c76d}{Find\+Rhymes}} (int\mbox{[}$\,$\mbox{]} \+\_\+word, int \+\_\+depth, \mbox{\hyperlink{classRhymeDictionary_1_1IPA_a562b779216d14ecddc3ca3a899e50730}{IPA.\+Similar\+Letters}} similar\+Letters)
+\begin{DoxyCompactList}\small\item\em Najde rýmy za použití podobností funkce pro hlásky. Rýmy nehledá s nějakou tolerancí.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1Trie_a52bdb2b49b6d09fdc8cd332b63ba7c17}{Print\+Trie}} (bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Vypíše strom trie do konzole v přehledném schéma.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1Trie_a75059f38ff496e9e5c0fe41f57f82359}{Trie}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privátní metody}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}} \mbox{\hyperlink{classRhymeDictionary_1_1Trie_a93a7ea7b01dff011c1a12d848871bce6}{Find\+Node\+For\+Word}} (int\mbox{[}$\,$\mbox{]} word)
+\begin{DoxyCompactList}\small\item\em Najde v \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}} vrchol pro dané slovo, pokuď po cestě potřebuje vytvořit vrcholy, tak je vytvoří.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privátní atributy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}} \mbox{\hyperlink{classRhymeDictionary_1_1Trie_a6f66d2af44e4dbea9e70fcda7187ebb3}{Root}} = new \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}}(-\/1, 0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Reprezentace stromu \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}. Slova v trii jsou uložená ve fonetické transkripci a každý foném je reprezentovaný číslem, kvůli následnému rychlejšímu indexovaní. Slova jsou také uložená pozpátku, aby se v Trii dali efektivně hledat rýmy.  
+
+\doxysubsection{Dokumentace konstruktoru a destruktoru}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a75059f38ff496e9e5c0fe41f57f82359}\label{classRhymeDictionary_1_1Trie_a75059f38ff496e9e5c0fe41f57f82359}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!Trie@{Trie}}
+\index{Trie@{Trie}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{Trie()}{Trie()}}
+{\footnotesize\ttfamily Rhyme\+Dictionary.\+Trie.\+Trie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor  
+
+
+
+\doxysubsection{Dokumentace členských funkcí}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a47a005974f4187fb292e861853fc6415}\label{classRhymeDictionary_1_1Trie_a47a005974f4187fb292e861853fc6415}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!BuildFromFile@{BuildFromFile}}
+\index{BuildFromFile@{BuildFromFile}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{BuildFromFile()}{BuildFromFile()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Trie.\+Build\+From\+File (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{char}]{separator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Postaví strom \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}} z csv souboru.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & Cesta k souboru \\
+\hline
+{\em separator} & Znak, jímž jsou slova v souboru oddělená \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a93a7ea7b01dff011c1a12d848871bce6}\label{classRhymeDictionary_1_1Trie_a93a7ea7b01dff011c1a12d848871bce6}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!FindNodeForWord@{FindNodeForWord}}
+\index{FindNodeForWord@{FindNodeForWord}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{FindNodeForWord()}{FindNodeForWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}} Rhyme\+Dictionary.\+Trie.\+Find\+Node\+For\+Word (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Najde v \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}} vrchol pro dané slovo, pokuď po cestě potřebuje vytvořit vrcholy, tak je vytvoří.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em word} & Slovo, pro které hledá vrchol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Vrchol, kam můžeme slovo uložit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_abe86e81d9a6f5b37f9541eda5ef3c76d}\label{classRhymeDictionary_1_1Trie_abe86e81d9a6f5b37f9541eda5ef3c76d}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!FindRhymes@{FindRhymes}}
+\index{FindRhymes@{FindRhymes}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{FindRhymes()}{FindRhymes()}}
+{\footnotesize\ttfamily List$<$ string $>$ Rhyme\+Dictionary.\+Trie.\+Find\+Rhymes (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{\+\_\+word,  }\item[{int}]{\+\_\+depth,  }\item[{\mbox{\hyperlink{classRhymeDictionary_1_1IPA_a562b779216d14ecddc3ca3a899e50730}{IPA.\+Similar\+Letters}}}]{similar\+Letters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Najde rýmy za použití podobností funkce pro hlásky. Rýmy nehledá s nějakou tolerancí.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em \+\_\+word} & Slovo, pro které hledá rýmy.\\
+\hline
+{\em \+\_\+depth} & Počet, kolik posledních písmen slov, se ještě musí rýmovat.\\
+\hline
+{\em similar\+Letters} & Funkce, podle které vyhledávání nachází podobná písmena.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Seznam nalezených rýmů.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a98ee5329d0ea65ea3a4fcfee28aebcfa}\label{classRhymeDictionary_1_1Trie_a98ee5329d0ea65ea3a4fcfee28aebcfa}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!FindRhymesWithTolerance@{FindRhymesWithTolerance}}
+\index{FindRhymesWithTolerance@{FindRhymesWithTolerance}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{FindRhymesWithTolerance()}{FindRhymesWithTolerance()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classRhymeDictionary_1_1Rhyme}{Rhyme}} $>$ Rhyme\+Dictionary.\+Trie.\+Find\+Rhymes\+With\+Tolerance (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{\+\_\+word,  }\item[{int}]{\+\_\+depth,  }\item[{float}]{tolerance,  }\item[{\mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Phonem\+Matrix}}}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Najde rýmy pro slovo za použití Matice podobností hlásek. Rýmy hledá s určitou tolerancí.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em \+\_\+word} & Slovo, pro které hledá rým. \\
+\hline
+{\em \+\_\+depth} & Počet, kolik posledních písmen slov, se ještě musí rýmovat. \\
+\hline
+{\em tolerance} & Desetinné číslo od 0 do 1, jak moc musí být nalezený rým dokonalý. \\
+\hline
+{\em matrix} & Matice podobností hlásek, podle které hledá podobná písmena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Seznam nalezených rýmů. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a52bdb2b49b6d09fdc8cd332b63ba7c17}\label{classRhymeDictionary_1_1Trie_a52bdb2b49b6d09fdc8cd332b63ba7c17}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!PrintTrie@{PrintTrie}}
+\index{PrintTrie@{PrintTrie}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{PrintTrie()}{PrintTrie()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Trie.\+Print\+Trie (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vypíše strom trie do konzole v přehledném schéma.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em verbose} & O vrcholech vypíše dodatečné množství informací, převážně pro debugování.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentace datových členů}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Trie_a6f66d2af44e4dbea9e70fcda7187ebb3}\label{classRhymeDictionary_1_1Trie_a6f66d2af44e4dbea9e70fcda7187ebb3}} 
+\index{RhymeDictionary.Trie@{RhymeDictionary.Trie}!Root@{Root}}
+\index{Root@{Root}!RhymeDictionary.Trie@{RhymeDictionary.Trie}}
+\doxysubsubsection{\texorpdfstring{Root}{Root}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}} Rhyme\+Dictionary.\+Trie.\+Root = new \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}}(-\/1, 0)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentace pro tuto třídu byla vygenerována z následujícího souboru\+:\begin{DoxyCompactItemize}
+\item 
+classes/\mbox{\hyperlink{Trie_8cs}{Trie.\+cs}}\end{DoxyCompactItemize}

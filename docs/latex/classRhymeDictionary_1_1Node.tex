@@ -1,0 +1,113 @@
+\hypertarget{classRhymeDictionary_1_1Node}{}\doxysection{Dokumentace třídy Rhyme\+Dictionary.\+Node}
+\label{classRhymeDictionary_1_1Node}\index{RhymeDictionary.Node@{RhymeDictionary.Node}}
+
+
+Reprezentuje Jeden vrchol ve strom \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}.   
+
+
+\doxysubsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1Node_ab27bd9e328f8a55fa0708cdbf3c4d635}{Node}} (int \+\_\+character, int \+\_\+depth)
+\begin{DoxyCompactList}\small\item\em Konstruktor  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRhymeDictionary_1_1Node_a840c5ba64afb1993db92a336ff934ad4}{Add\+Word}} (string new\+\_\+word)
+\begin{DoxyCompactList}\small\item\em Přidá slovo do vrcholu. V každém vrcholu totiž může být i více slov. Například slova oběd a objet vypadají obě ve fonetické transkripci \mbox{[}objet\mbox{]}, takže se budou nacházet ve stejném vrcholu. Slova se sem ukládají zapsaná podle ortografického úzusu češtiny.  \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{classRhymeDictionary_1_1Node_a7a5daab62c195ba0f3cb4277f2d3d4fe}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Vrátí zákládní informace o vrcholu přehledně zapsané.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRhymeDictionary_1_1Node_ab86264c8fb47d7727027c6c5d8e523eb}{character}}
+\item 
+int \mbox{\hyperlink{classRhymeDictionary_1_1Node_a787b456de8212e5650ffcef17b5993f7}{depth}}
+\item 
+\mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRhymeDictionary_1_1Node_aed57da368134a96223cdf4fcaf5732c0}{Following}}
+\item 
+List$<$ String $>$ \mbox{\hyperlink{classRhymeDictionary_1_1Node_a3b1c0860bac16bc86d47a7e2c6253f90}{Words}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Reprezentuje Jeden vrchol ve strom \mbox{\hyperlink{classRhymeDictionary_1_1Trie}{Trie}}.  
+
+\doxysubsection{Dokumentace konstruktoru a destruktoru}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_ab27bd9e328f8a55fa0708cdbf3c4d635}\label{classRhymeDictionary_1_1Node_ab27bd9e328f8a55fa0708cdbf3c4d635}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!Node@{Node}}
+\index{Node@{Node}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Rhyme\+Dictionary.\+Node.\+Node (\begin{DoxyParamCaption}\item[{int}]{\+\_\+character,  }\item[{int}]{\+\_\+depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor  
+
+
+\begin{DoxyParams}{Parametry}
+{\em \+\_\+character} & Znak, který se ve stromě nachází reprezentovaný číslem, které indexuje \mbox{\hyperlink{classRhymeDictionary_1_1IPA_ada771137ca9c224fa53b7faf35ce148d}{IPA.\+Chars}}\\
+\hline
+{\em \+\_\+depth} & Hloubka, ve které se vrchol nachází od kořene.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentace členských funkcí}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_a840c5ba64afb1993db92a336ff934ad4}\label{classRhymeDictionary_1_1Node_a840c5ba64afb1993db92a336ff934ad4}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!AddWord@{AddWord}}
+\index{AddWord@{AddWord}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{AddWord()}{AddWord()}}
+{\footnotesize\ttfamily void Rhyme\+Dictionary.\+Node.\+Add\+Word (\begin{DoxyParamCaption}\item[{string}]{new\+\_\+word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Přidá slovo do vrcholu. V každém vrcholu totiž může být i více slov. Například slova oběd a objet vypadají obě ve fonetické transkripci \mbox{[}objet\mbox{]}, takže se budou nacházet ve stejném vrcholu. Slova se sem ukládají zapsaná podle ortografického úzusu češtiny.  
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+\_\+word} & Slovo zapsané podle ortografického úzusu.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_a7a5daab62c195ba0f3cb4277f2d3d4fe}\label{classRhymeDictionary_1_1Node_a7a5daab62c195ba0f3cb4277f2d3d4fe}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!ToString@{ToString}}
+\index{ToString@{ToString}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Rhyme\+Dictionary.\+Node.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vrátí zákládní informace o vrcholu přehledně zapsané.  
+
+\begin{DoxyReturn}{Návratová hodnota}
+Základní informace o vrcholu.
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentace datových členů}
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_ab86264c8fb47d7727027c6c5d8e523eb}\label{classRhymeDictionary_1_1Node_ab86264c8fb47d7727027c6c5d8e523eb}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!character@{character}}
+\index{character@{character}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily int Rhyme\+Dictionary.\+Node.\+character}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_a787b456de8212e5650ffcef17b5993f7}\label{classRhymeDictionary_1_1Node_a787b456de8212e5650ffcef17b5993f7}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!depth@{depth}}
+\index{depth@{depth}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily int Rhyme\+Dictionary.\+Node.\+depth}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_aed57da368134a96223cdf4fcaf5732c0}\label{classRhymeDictionary_1_1Node_aed57da368134a96223cdf4fcaf5732c0}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!Following@{Following}}
+\index{Following@{Following}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{Following}{Following}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRhymeDictionary_1_1Node}{Node}} \mbox{[}$\,$\mbox{]} Rhyme\+Dictionary.\+Node.\+Following}
+
+\mbox{\Hypertarget{classRhymeDictionary_1_1Node_a3b1c0860bac16bc86d47a7e2c6253f90}\label{classRhymeDictionary_1_1Node_a3b1c0860bac16bc86d47a7e2c6253f90}} 
+\index{RhymeDictionary.Node@{RhymeDictionary.Node}!Words@{Words}}
+\index{Words@{Words}!RhymeDictionary.Node@{RhymeDictionary.Node}}
+\doxysubsubsection{\texorpdfstring{Words}{Words}}
+{\footnotesize\ttfamily List$<$String$>$ Rhyme\+Dictionary.\+Node.\+Words}
+
+
+
+Dokumentace pro tuto třídu byla vygenerována z následujícího souboru\+:\begin{DoxyCompactItemize}
+\item 
+classes/\mbox{\hyperlink{Node_8cs}{Node.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+\hypertarget{PhonemMatrix_8cs}{}\doxysection{Dokumentace souboru classes/\+Phonem\+Matrix.cs}
+\label{PhonemMatrix_8cs}\index{classes/PhonemMatrix.cs@{classes/PhonemMatrix.cs}}
+\doxysubsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRhymeDictionary_1_1PhonemMatrix}{Rhyme\+Dictionary.\+Phonem\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Matice podobností fonémů. Jejím hlavním attributem je Matice, kde pro každá dvě písmena máme míru jejich podobnosti. Písmena jsou reprezentována opět čísly, takže například vztah mezi písmeny b a p najdeme na souřadnicích \mbox{[}2, 21\mbox{]} nebo \mbox{[}21, 2\mbox{]} (b je třetí foném a b dvacátý druhý). Relace podobnosti je symetrická, tudíž i matice je symetrická. Diagonála by vždy měla být vyplněna samými jedničkami, ježto stejná písmena jsou si nejpodobnější a všechna ostatní čísla by neměla převyšovat jedničku, ani být nižší než nula. Po vygenerování matice můžeme rovnou pro každé písmeno vygenerovat seřazené pole jeho nejlepších podobností, aby se to nemuselo dělat pokaždé znova.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Jmenné prostory}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceRhymeDictionary}{Rhyme\+Dictionary}}
+\end{DoxyCompactItemize}
